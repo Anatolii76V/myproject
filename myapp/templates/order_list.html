@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Список заказанных товаров</h1>
+    <h2>За последние {{ period }} дней</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

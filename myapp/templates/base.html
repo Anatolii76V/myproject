@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Интернет магазин{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в наш Интернет магазин</h1>
+        <nav>
+            <a href="{% url 'client_list' %}">Список клиентов</a>
+            <a href="{% url 'product_list' %}">Список товаров</a>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+        <img src="{% static '01.jpg' %}" alt="Example Image" width="800" height="500">
+    </div>
+    <footer>
+        <p>© 2023 Интернет магазин.</p>
+    </footer>
+</body>
+</html>
